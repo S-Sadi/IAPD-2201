@@ -1,0 +1,66 @@
+{% extends 'home_page.html' %}
+{% block title %} Registration {% endblock %}
+{% block body %}
+
+<section class="login-area">
+    <div class="login-wrapper">
+        <div class="form-div">
+            <div class="title">
+                <h1>Hi There</h1>
+            </div>
+            <form method="POST">
+                {% if messages %}
+                    {% for massage in messages  %}
+                    <ul>
+                      <li>
+                       {{ massage }}
+                      </li>
+                    </ul>
+                    {% endfor %}
+                {% endif %}
+
+
+                {% csrf_token %}
+                <label>
+                    <p>Frist Name :</p>
+                    <input type="text" name="first_name">
+                </label>
+                <br><br>
+                <label>
+                    <p>Last Name :</p>
+                    <input type="text" name="last_name">
+                </label>
+                <br><br>
+                <label>
+                    <p>Enter your email :</p>
+                    <input type="email" name="email">
+                </label>
+                <br><br>
+                <label>
+                    <p>User Name :</p>
+                    <input type="text" name="username">
+                </label>
+                <br><br>
+                <label>
+                    <p>Create your Password :</p>
+                    <input type="password" name="password1">
+                </label>
+                <br><br>
+                <label>
+                    <p>Confirm your Password :</p>
+                    <input type="password" name="password2">
+                </label>
+                <br><br>
+                <div style="margin-top: 10px;" class="login-buton">
+                    <button type="submit">
+                        <!--              <a href="{% url 'home' %}">-->
+                        registration
+                        </a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'home_page.html' %}
+{% block title %} logIn {% endblock %}
+{% block body %}
+<section class="login-area">
+    <div class="login-wrapper">
+        <div class="form-div">
+            <div class="title">
+                <h1>Hi There</h1>
+            </div>
+            <form method="POST">
+                 {% if messages %}
+                    {% for massage in messages  %}
+                    <ul>
+                      <li>
+                       {{ massage }}
+                      </li>
+                    </ul>
+                    {% endfor %}
+                {% endif %}
+
+
+                {% csrf_token %}
+                <label>
+                    <p>Username :</p>
+                    <input type="text" name="username">
+                </label>
+                <br><br>
+                <label>
+                    <p>Password :</p>
+                    <input type="password" name="password">
+                </label>
+                <br>
+                <div class="login-buton">
+                    <button type="submit">
+                        log in
+                    </button>
+                </div>
+                <p style="font-size: 18px; text-align:center; margin-top:10px;">Don't have an account.<br><span
+                        style="color: red;">Register Now</span></p>
+                <div style="margin-top: 10px;" class="login-buton">
+                    <button>
+                        <a href=" {% url 'registration' %}">
+                            Register
+                        </a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
