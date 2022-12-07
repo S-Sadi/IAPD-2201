@@ -53,9 +53,18 @@ def logout(request):
 
 def index(request):
     product = Product.objects.all()
+    category = Category.objects.all()
     # print(product)
 
     # context = {
     #     'pro' : product
     # }
     return render(request, 'index.html', locals())
+
+
+def product(request, id):
+    prod =  Product.objects.filter(id=id)
+    print(prod)
+
+    return render(request, 'product.html',locals())
+

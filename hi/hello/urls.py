@@ -10,4 +10,5 @@ urlpatterns = [
     path('registration/', views.registration, name="registration"),
     path("", views.home, name="home"),
     path("index", views.index, name="index"),
+    path("product/<int:id>/ ", views.product, name="product"),
 ]

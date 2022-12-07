@@ -124,15 +124,10 @@
                                             <ul class="cart-list">
                                                 <li class="product-box-contain">
                                                     <div class="drop-cart">
-                                                        <a href="product-left-thumbnail.html" class="drop-image">
-                                                            <img src="{% static 'assets/images/vegetable/product/1.png'%}"
-                                                                 class="blur-up lazyload" alt="">
-                                                        </a>
+
 
                                                         <div class="drop-contain">
-                                                            <a href="product-left-thumbnail.html">
-                                                                <h5>Fantasy Crunchy Choco Chip Cookies</h5>
-                                                            </a>
+
                                                             <h6><span>1 x</span> $80.58</h6>
                                                             <button class="close-button close_button">
                                                                 <i class="fa-solid fa-xmark"></i>
@@ -143,16 +138,9 @@
 
                                                 <li class="product-box-contain">
                                                     <div class="drop-cart">
-                                                        <a href="product-left-thumbnail.html" class="drop-image">
-                                                            <img src="{% static 'assets/images/vegetable/product/2.png'%}"
-                                                                 class="blur-up lazyload" alt="">
-                                                        </a>
 
                                                         <div class="drop-contain">
-                                                            <a href="product-left-thumbnail.html">
-                                                                <h5>Peanut Butter Bite Premium Butter Cookies 600 g
-                                                                </h5>
-                                                            </a>
+
                                                             <h6><span>1 x</span> $25.68</h6>
                                                             <button class="close-button close_button">
                                                                 <i class="fa-solid fa-xmark"></i>
@@ -709,25 +697,7 @@
                                                     <a class="dropdown-item" href="product-4-image.html">Product
                                                         4 Image</a>
                                                 </li>
-                                                <li class="sub-dropdown-hover">
-                                                    <a href="javascript:void(0)" class="dropdown-item">Product
-                                                        Thumbnail</a>
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a href="product-left-thumbnail.html">Left Thumbnail</a>
-                                                        </li>
 
-                                                        <li>
-                                                            <a href="product-right-thumbnail.html">Right
-                                                                Thumbnail</a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="product-bottom-thumbnail.html">Bottom
-                                                                Thumbnail</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
                                                 <li>
                                                     <a href="product-bundle.html" class="dropdown-item">Product
                                                         Bundle</a>
@@ -991,86 +961,16 @@
                     <div class="category-menu">
                         <h3>Category</h3>
                         <ul>
+                            {% for i in category %}
                             <li>
                                 <div class="category-list">
                                     <img src="{% static 'assets/svg/1/vegetable.svg'%}" class="blur-up lazyload" alt="">
                                     <h5>
-                                        <a href="shop-left-sidebar.html">Vegetables & Fruit</a>
+                                        <a href="shop-left-sidebar.html">{{i.name}}</a>
                                     </h5>
                                 </div>
                             </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/cup.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Beverages</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/meats.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Meats & Seafood</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/breakfast.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Breakfast & Dairy</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/frozen.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Frozen Foods</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/biscuit.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Biscuits & Snacks</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/grocery.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Grocery & Staples</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/drink.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Wines & Alcohol Drinks</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/milk.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Milk & Dairies</a>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li class="pb-30">
-                                <div class="category-list">
-                                    <img src="{% static 'assets/svg/1/pet.svg'%}" class="blur-up lazyload" alt="">
-                                    <h5>
-                                        <a href="shop-left-sidebar.html">Pet Foods</a>
-                                    </h5>
-                                </div>
-                            </li>
+                            {% endfor %}
                         </ul>
 
 
@@ -1103,7 +1003,7 @@
                                         {% for i in product %}
                                         <div class="product-box">
                                             <div class="product-image">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{% url 'product' i.id %}">
                                                     <img src="{{i.image.url}}"
                                                          class="img-fluid blur-up lazyload" alt="">
                                                 </a>
@@ -1132,9 +1032,9 @@
                                                 </ul>
                                             </div>
                                             <div class="product-detail">
-                                                <a href="product-left-thumbnail.html">
+
                                                     <h6 class="name">{{i.name}}</h6>
-                                                </a>
+
 
                                                 <h5 class="sold text-content">
                                                     <span class="theme-color price">{{i.price}}</span>
