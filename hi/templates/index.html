@@ -84,10 +84,18 @@
                             <div class="search-box">
                                 <div class="input-group">
                                     <input type="search" class="form-control" placeholder="I'm searching for..."
-                                           aria-label="Recipient's username" aria-describedby="button-addon2">
-                                    <button class="btn" type="button" id="button-addon2">
+                                           name=searchvalue aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    
+                                    <button onclick=searchclick() class="btn" type="button" id="button-addon2">
                                         <i data-feather="search"></i>
                                     </button>
+                                    <script>
+                                        function searchclick() {
+                                            var i = document.getElementsByName("searchvalue")[0].value;
+                                            window.location = "{% url 'search' 1234 %}".replace(/1234/, i.toString());
+                                        }
+                                    </script>
+                                
                                 </div>
                             </div>
                         </div>
@@ -956,6 +964,7 @@
 <section class="product-section">
     <div class="container-fluid-lg">
         <div class="row g-sm-4 g-3">
+            {% block category %}
             <div class="col-xxl-3 col-xl-4 d-none d-xl-block">
                 <div class="p-sticky">
                     <div class="category-menu">
@@ -979,8 +988,10 @@
 
                 </div>
             </div>
+            {% endblock %}
 
             <div class="col-xxl-9 col-xl-8">
+                {% block t1 %}
                 <div class="title title-flex">
                     <div>
                         <h2>Top Save Today</h2>
@@ -993,7 +1004,7 @@
                     </div>
 
                 </div>
-
+                {% endblock %}
                 <div class="section-b-space">
                     <div class="product-border border-row overflow-hidden">
                         <div class="product-box-slider no-arrow">
@@ -1098,6 +1109,7 @@
                     </div>
                 </div>
 
+                {% block footercategory %}
                 <div class="title">
                     <h2>Bowse by Categories</h2>
                     <span class="title-leaf">
@@ -1172,7 +1184,7 @@
                         </a>
                     </div>
                 </div>
-
+                {% endblock %}
 
                 <!-- Newsletter Section End -->
 

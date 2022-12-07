@@ -68,3 +68,7 @@ def product(request, id):
 
     return render(request, 'product.html',locals())
 
+def search(request, pk):
+    prod = Product.objects.filter(name__startswith=pk)
+    
+    return render(request, "search.html", {"product": prod})
