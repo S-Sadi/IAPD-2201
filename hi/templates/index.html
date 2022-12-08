@@ -975,7 +975,7 @@
                                 <div class="category-list">
                                     <img src="{% static 'assets/svg/1/vegetable.svg'%}" class="blur-up lazyload" alt="">
                                     <h5>
-                                        <a href="shop-left-sidebar.html">{{i.name}}</a>
+                                        <a href="{% url 'search' i.name %}">{{i.name}}</a>
                                     </h5>
                                 </div>
                             </li>
